@@ -3,16 +3,31 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
+
+GAPPS_VARIANT := nano
+GAPPS_FORCE_PACKAGE_OVERRIDES := true
+GAPPS_FORCE_PIXEL_LAUNCHER := true
+GAPPS_FORCE_WEBVIEW_OVERRIDES := true
+GAPPS_FORCE_MMS_OVERRIDES := true
+GAPPS_FORCE_DIALER_OVERRIDES := true
+GAPPS_FORCE_BROWSER_OVERRIDES := true
+
+GAPPS_PRODUCT_PACKAGES += \
+    Chrome \
+    CalendarGooglePrebuilt \
+    PixelLauncher \
+    CalculatorGoogle \
+    PrebuiltDeskClockGoogle \
+    GoogleContacts \
+    GoogleDialer \
+    LatinImeGoogle \
+    PrebuiltGmail
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 $(call inherit-product, device/oneplus/sm8150-common/common.mk)
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/oneplus/hotdog/hotdog-vendor.mk)
-
-GAPPS_VARIANT := stock
-GAPPS_FORCE_PACKAGE_OVERRIDES := true
-GAPPS_FORCE_PIXEL_LAUNCHER := true
-GAPPS_FORCE_MATCHING_DPI := true
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
