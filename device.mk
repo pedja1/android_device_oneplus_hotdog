@@ -9,7 +9,6 @@ GAPPS_FORCE_PACKAGE_OVERRIDES := true
 GAPPS_FORCE_PIXEL_LAUNCHER := true
 GAPPS_FORCE_WEBVIEW_OVERRIDES := true
 GAPPS_FORCE_MMS_OVERRIDES := true
-GAPPS_FORCE_DIALER_OVERRIDES := false
 GAPPS_FORCE_BROWSER_OVERRIDES := true
 
 GAPPS_PRODUCT_PACKAGES += \
@@ -19,7 +18,6 @@ GAPPS_PRODUCT_PACKAGES += \
     CalculatorGoogle \
     PrebuiltDeskClockGoogle \
     GoogleContacts \
-    GoogleDialer \
     LatinImeGoogle \
     PrebuiltGmail
 
